@@ -1,6 +1,6 @@
 - name: ngrok | install unzip
   apt: >
-    pkg={{ item }} 
+    pkg={{ item }}
     state=latest
     force=yes
   with_items:
@@ -17,6 +17,7 @@
     ngrok_hostname="{{ '-hostname=' ~ ngrok.hostname if ngrok.hostname is defined else '' }}"
     ngrok_config="{{ '-config=' ~ ngrok.config if ngrok.config is defined else '' }}"
     ngrok_log="{{ '-log=stdout' ~ ngrok.log if ngrok.log is defined else '' }}"
+    ngrok_token="{{ '-authtoken=' ~ ngrok.token if ngrok.token is defined else '' }}"
 
 - name: ngrok | check if installed
   stat: >
