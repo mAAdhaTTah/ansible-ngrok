@@ -1,8 +1,7 @@
 ---
 galaxy_info:
-  author: Patrick Heeney
-  company: Protobox
-  description: "Ngrok Configuration"
+  author: mAAdhaTTah
+  description: "Ngrok Configuration for Ubuntu"
   min_ansible_version: 1.4
   license: MIT
   platforms:
