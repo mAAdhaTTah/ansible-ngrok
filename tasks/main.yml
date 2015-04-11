@@ -8,7 +8,7 @@
 
 - name: ngrok | set facts
   set_fact: >
-    ngrok_package="{{ ngrok.download_url|default("https://dl.ngrok.com/linux_386/ngrok.zip") }}"
+    ngrok_package="{{ ngrok.download_url|default("https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=linux&arch=386&channel=stable") }}"
     ngrok_port={{ ngrok.port|default('80') }}
     ngrok_client={{ ngrok.client|default('false') }}
     ngrok_subdomain="{{ '-subdomain=' ~ ngrok.subdomain if ngrok.subdomain is defined else '' }}"
